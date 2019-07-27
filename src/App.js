@@ -6,18 +6,16 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import Home from './pages/Home';
 
-const App = () => {
-  return (
-    <AuthProvider>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-          <ProtectedRoute path="/" component={Home} />
-        </Switch>
-      </BrowserRouter>
-    </AuthProvider>
-  )
-}
+const App = () => (
+  <AuthProvider>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/login" component={Login}/>
+        <Route path="/register" component={Register}/>
+        <ProtectedRoute path="/" component={Home}/>
+      </Switch>
+    </BrowserRouter>
+  </AuthProvider>
+);
 
 export default App;
